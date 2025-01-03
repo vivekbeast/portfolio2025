@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .LandingPage{
+  background: #A1FFCE;
+background: -webkit-linear-gradient(to top, #e5ffd1, #98f1c3); 
+background: linear-gradient(to top, #e5ffd1, #98f1c3); 
+} */
