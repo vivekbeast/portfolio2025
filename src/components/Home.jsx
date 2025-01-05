@@ -296,7 +296,7 @@ const Home = () => {
       className="text-left h-fit space-y-4"
     >
       <h1 className="text-md whitespace-normal flex flex-col font-bold w-fit leading-snug text-white">
-       <span> Hi, I&apos;m <br /> <span className="text-green-500 text-lg">Vivek Tarnallya</span> —</span> <br />
+       <span> Hi, I&apos;m <br /> <span className="text-green-500 text-xl">Vivek Tarnallya</span> —</span> <br />
         <span>Crafting Digital Experiences with Code and Creativity!</span>
       </h1>
       <button
