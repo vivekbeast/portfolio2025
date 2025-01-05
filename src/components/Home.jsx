@@ -85,7 +85,7 @@ const Home = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex flex-col sm:flex-row h-[400px] md:h-auto gap-4 md:gap-6 text-white bg-slate-300 w-full md:w-auto justify-center text-center items-center py-2 px-4 md:px-8 mt-2 rounded-lg md:rounded-full"
+          className="flex flex-col sm:flex-row h-[300px] md:h-auto gap-4 md:gap-6 text-white bg-slate-300 w-full md:w-auto justify-center text-center items-center py-2 px-4 md:px-8 mt-2 rounded-lg md:rounded-full"
         >
           <a
             href="#skill"
