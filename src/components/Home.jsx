@@ -111,7 +111,7 @@ const Home = () => {
       {/* Social Media Links */}
       <div
         className={`${
-          isOpen ? "block pb-16 md:pb-0 mt-10 md:mt-0" : "hidden"
+          isOpen ? "block pb-16 md:pb-0 mt-20 md:mt-0" : "hidden"
         } md:flex flex flex-row gap-6 justify-center mt-4 md:mt-0`}
       >
         <a
