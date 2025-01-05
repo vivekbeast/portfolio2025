@@ -17,27 +17,27 @@ import { GiSkills } from "react-icons/gi";
 
 const Skills = () => {
   return (
-    <div id="skill" className=" h-auto w-screen bg-[#e5ffd1] flex flex-col justify-center items-center text-center">
+    <div id="skill" className=" h-auto w-auto md:w-screen bg-[#2c5364] flex flex-col justify-center items-center text-center">
 
-      <div className=" h-[200px] w-screen flex flex-col justify-center items-start gap-4 px-40 ">
+      <div className=" h-[200px] w-auto md:w-full flex flex-col justify-center items-start gap-4 px-40 ">
         <div className=" text-2xl shadow-lg  text-green-700 font-semibold flex flex-row text-start w-fit justify-start py-2 px-8 bg-white items-center gap-2 rounded-lg"> <GiSkills color="black"  /> <span className=" text-black">Skills</span></div> 
         {/* <h2 className=" text-lg uppercase text-green-600 w-full text-center font-medium">Enthusiastic Software Developer, eager to explore and work with every tech stack!</h2>    */}
      </div>  
-      <div className=" h-[500px] flex flex-col  items-center gap-5">
+     <div className=" h-[500px] flex flex-col  items-center gap-5">
         <motion.h1 
         initial={{ opacity: 0, x: 100 }} // Start off the screen to the right
         // animate={{ opacity: 1, x: 0 }} // Animate to the normal position
         whileInView={{opacity: 1, x: 0 }}
         transition={{ type: 'spring', stiffness: 50 }}
-        className=" text-3xl text-gray-700 font-semibold">Software Development</motion.h1>
+        className=" md:text-3xl text-2xl text-white font-semibold">Software Development</motion.h1>
         <div className=" mt-2">
         <motion.div 
         initial={{ opacity: 0, x: 100 }} // Start off the screen to the right
         // animate={{ opacity: 1, x: 0 }} // Animate to the normal position
         whileInView={{opacity: 1, x: 0 }}
         transition={{ type: 'spring', stiffness: 50 }}
-        className="flex flex-col justify-center items-center space-y-4 ">
-     <div className=" flex flex-row space-x-4">
+        className=" flex justify-center flex-1 items-center space-y-4 w-auto">
+     <div className=" grid grid-cols-5 justify-center items-center gap-4 px-4">
      <div className="relative group">
         <div className="text-red-500 bg-white p-4 rounded-full shadow-md">
           <FaHtml5 size={25} />
@@ -91,9 +91,7 @@ const Skills = () => {
           Redux
         </div>
       </div>
-     </div>
 
-      <div className=" flex flex-row space-x-4">
       <div className="relative group">
         <div className="text-indigo-500 bg-white p-4 rounded-full shadow-md">
           <FaYarn size={25} />
@@ -129,7 +127,9 @@ const Skills = () => {
           Java
         </div>
       </div>
-      </div>
+     </div>
+
+      
 
         </motion.div>
         </div>
@@ -138,7 +138,7 @@ const Skills = () => {
         // animate={{ opacity: 1, x: 0 }} // Animate to the normal position
         whileInView={{opacity: 1, x: 0 }}
         transition={{ type: 'spring', stiffness: 50, delay: 0.5 }}
-        className="space-y-4 text-lg text-start mt-4">
+        className="space-y-4 md:text-lg text-sm px-4 md:p-0 whitespace-normal text-white text-start mt-4">
       <p>
         <span role="img" aria-label="laptop" className="mr-2">💻</span>
         <span >Building seamless, engaging user interfaces for dynamic web experiences</span>
@@ -157,19 +157,19 @@ const Skills = () => {
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ type: 'spring', stiffness: 50 }}
-        className="text-3xl text-gray-700 font-semibold"
+        className="md:text-3xl text-2xl text-white font-semibold"
       >
         Database & Tools
       </motion.h1>
 
-      <div className="mt-2">
+      <div className="mt-2 ">
         <motion.div
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ type: 'spring', stiffness: 50 }}
-          className="flex flex-col justify-center items-center space-y-4"
+          className="flex flex-1 justify-center w-full items-center space-y-4"
         >
-          <div className="flex flex-row space-x-4">
+          <div className="grid grid-cols-3 md:grid-rows-1 justify-center items-center w-full  gap-4">
             <div className="relative group">
               <div className="text-green-500 bg-white p-4 rounded-full shadow-md">
                 <SiMongodb size={25} />
@@ -223,10 +223,7 @@ const Skills = () => {
                 Three.js
               </div>
             </div> */}
-          </div>
-
-          <div className="flex flex-row space-x-4">
-            <div className="relative group">
+                        <div className="relative group">
               <div className="text-indigo-500 bg-white p-4 rounded-full shadow-md">
                 <FaGitAlt size={25} />
               </div>
@@ -269,7 +266,7 @@ const Skills = () => {
         initial={{ opacity: 0, x: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ type: 'spring', stiffness: 50, delay: 0.5 }}
-        className="space-y-4 text-lg text-start mt-4"
+        className="space-y-4 md:text-lg text-sm p-4 md:p-0 text-start mt-4 text-white"
       >
         <p>
           <span role="img" aria-label="laptop" className="mr-2">🗄️</span>
