@@ -12,7 +12,7 @@ import { HiMenuAlt3, HiX } from "react-icons/hi";
 const Home = () => {
 
   const handleViewResume = () => {
-    window.open('/RESUME.pdf');
+    window.open('/VivekResume.pdf');
   };
 
   const [navbar, setNavbar] = useState(false);
