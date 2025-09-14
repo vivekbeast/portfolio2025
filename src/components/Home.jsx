@@ -8,6 +8,7 @@ import LastCard from "./LastCard";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
+import { Modal } from "@mantine/core";
 
 const Home = () => {
 
@@ -17,6 +18,7 @@ const Home = () => {
 
   const [navbar, setNavbar] = useState(false);
   const [isOpen, setIsOpen] = useState(false); // State for mobile menu toggle
+  const [opened, setOpened] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -197,41 +199,134 @@ const Home = () => {
 <motion.div
   initial={{ x: "0", y: 0 }}
   animate={{
-    x: "10px",
-    y: "80px",
+    x: "20px",
+    y: "90px",
     rotate: -30, // Rotate 30 degrees upwards
     transition: { duration: 1, ease: "easeOut", delay: 0.5 },
   }}
   style={{ transformOrigin: "bottom center" }}
   className=" flex flex-col items-start justify-center gap-2 text-start h-fit  "
 >
-  <h1 className="text-lg md:text-xl font-bold whitespace-nowrap  leading-snug text-white">
-    Hi, I&apos;m <span className="text-green-500 text-2xl">Vivek Tarnallya</span> —
+  <h1 className="text-lg md:text-lg font-bold whitespace-nowrap  leading-snug text-white">
+    Hi, I&apos;m <span className="text-green-500 text-lg">Vivek Tarnallya</span> —
     <br />
     Crafting Digital Experiences with Code <br /> and Creativity!
   </h1>
-  <button
-        onClick={handleViewResume}
-        className=" bg-green-600 border-2 border-[#f4f4f4] text-white flex flex-row justify-center text-center items-center gap-2 py-2 px-6 uppercase text-md font-medium rounded-md hover:bg-inherit transition duration-300"
-      >
-      <IoDocumentOutline /> <span> See My Resume</span>
-  </button>
+  
       
   </motion.div>
 <motion.div
   initial={{ x: "0", y: 0 }}
   animate={{
-    x: "60px",
-    y: "-30px",
+    x: "30px",
+    y: "-110px",
     rotate: -30, // Rotate 30 degrees upwards
     transition: { duration: 1, ease: "easeOut", delay: 0.5 },
   }}
-  style={{ transformOrigin: "bottom center" }}
-  className="flex flex-col items-center justify-center text-center h-fit"
+  style={{ transformOrigin: "center" }}
+  className="flex flex-col items-start justify-start text-center h-fit"
 >
-  <h1 className="text-md font-semibold whitespace-nowrap  leading-snug text-white">
-  A passionate software developer <br /> specializing in front-end development,<br /> I transform ideas into intuitive, responsive,<br /> and engaging digital experiences. With a <br />knack for clean code and seamless design,<br /> I strive to make the web a more <br /> beautiful and functional place.
-  </h1>
+
+  <div className="w-[380px] flex flex-col justify-center items-center text-center  overflow-auto ">
+  <h1 className="text-lg font-semibold  text-white">
+          A passionate full-stack developer specializing in MERN, Next.js, and Java...<span className=" text-green-400 cursor-pointer hover:underline" onClick={() => setOpened(true)}>
+            Read More
+          </span>
+        </h1>
+      
+</div>
+
+
+<Modal
+  opened={opened}
+  onClose={() => setOpened(false)}
+  title="About Me"
+  size="lg"
+  overlayProps={{
+    backgroundOpacity: 0.7,
+    blur: 8,
+    className: "backdrop-blur-md"
+  }}
+  centered
+  radius="xl"
+  padding="xl"
+  styles={{
+    content: {
+      background: 'linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,250,252,0.95) 100%)',
+      backdropFilter: 'blur(20px)',
+      border: '1px solid rgba(255,255,255,0.2)',
+      boxShadow: '0 25px 50px -12px rgba(0,0,0,0.25)',
+    },
+    header: {
+      paddingBottom: '1.5rem',
+      borderBottom: '1px solid rgba(0,0,0,0.1)',
+      marginBottom: '1.5rem'
+    }
+  }}
+>
+  <div className="space-y-6">
+    {/* Enhanced Text Content */}
+    <div className="prose prose-lg max-w-none">
+      <div className="text-black  leading-relaxed space-y-4">
+        <p className="text-lg font-medium text-gray-900 ">
+          A passionate full-stack developer with deep expertise in front-end
+          technologies and a growing mastery of backend systems.
+        </p>
+        
+        <p className="text-base">
+          I specialize in building intuitive, responsive, and engaging digital
+          experiences with frameworks like{" "}
+          <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-md text-sm font-medium">
+            React
+          </span>,{" "}
+          <span className="px-2 py-1 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 rounded-md text-sm font-medium">
+            Next.js
+          </span>, and the{" "}
+          <span className="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded-md text-sm font-medium">
+            MERN stack
+          </span>,
+          while also engineering robust backend solutions with{" "}
+          <span className="px-2 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-200 rounded-md text-sm font-medium">
+            Node.js
+          </span>{" "}
+          and{" "}
+          <span className="px-2 py-1 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-200 rounded-md text-sm font-medium">
+            Java
+          </span>.
+        </p>
+        
+        <p className="text-base">
+          With a knack for clean, scalable code and seamless design, I bridge
+          the gap between user experience and technical performance—striving to
+          make the web both beautiful and powerful.
+        </p>
+      </div>
+    </div>
+
+
+
+    {/* Enhanced Resume Button */}
+    <div className="flex flex-col sm:flex-row gap-3 pt-4">
+      <button
+        onClick={handleViewResume}
+        className="group relative overflow-hidden bg-gradient-to-r from-emerald-500 to-teal-600  text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center gap-2"
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+        <IoDocumentOutline className="w-5 h-5 transition-transform group-hover:rotate-12" />
+        <span className="relative">View My Resume</span>
+      </button>
+      
+      <button
+        onClick={() => setOpened(false)}
+        className="px-6 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:bg-gray-50 dark:hover:bg-gray-800 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-200"
+      >
+        Close
+      </button>
+    </div>
+  </div>
+</Modal>
+
+
 </motion.div>
 </motion.div>
 

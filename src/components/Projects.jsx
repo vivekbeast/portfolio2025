@@ -21,18 +21,17 @@ const Projects = () => {
           transition={{ type: "spring", stiffness: 50 }}
         >
           <div className="w-full h-[250px] bg-gray-100 flex flex-col rounded-lg mb-4 overflow-hidden">
-            <img src="/Workorbit.png" alt="" />
+            <img src="/safespace.png" alt="" />
           </div>
-          <h2 className=" text-md md:text-lg font-semibold text-gray-800 text-start">WorkOrbit : Effortless Task Management</h2>
+          <h2 className=" text-md md:text-lg font-semibold text-gray-800 text-start">Safe Space: Community safety platform</h2>
           <p className="text-xs md:text-sm text-gray-600 text-start">
-            WorkOrbit simplifies task management by allowing admins to assign tasks with details, monitor progress through team updates, and ensure transparency. Users access personalized pages with unique IDs to view and update task statuses, enhancing productivity and collaboration.
-          </p>
+Safe Space is a community safety platform that enables real-time incident reporting, verification, and visualization through interactive maps and heatmaps. Built with Next.js, MongoDB, NextAuth, Node.js, Express.js, Leaflet, and OpenStreetMap, it helps communities track and respond to safety concerns effectively          </p>
           <div className="flex flex-row gap-4 w-full mt-4">
-            <a href="https://work-o2ak.vercel.app/" target="_blank"
+            <a href="https://safe-space-hub.vercel.app/" target="_blank"
           rel="noopener noreferrer" className="text-white bg-black py-1 flex flex-row justify-center items-center gap-2 px-4 rounded hover:bg-green-600 transition-all duration-300 ease-in-out">
               <FaExternalLinkAlt className=" text-sm md:text-lg" /> <span className=" ">Demo</span>
             </a>
-            <a href="https://github.com/vivekbeast/work" target="_blank"
+            <a href="https://github.com/vivekbeast/" target="_blank"
           rel="noopener noreferrer" className="bg-black text-white py-1 text-center flex justify-center items-center px-4 rounded">
               <FaGithub />
             </a>
@@ -75,14 +74,15 @@ const Projects = () => {
           <div className="w-full h-[250px] bg-gray-100 flex flex-col rounded-lg mb-4 overflow-hidden">
             <img src="/syntax.png" alt="" className=" h-full w-full" />
           </div>
-          <h2 className="text-md md:text-lg font-semibold text-gray-800 text-start">Syntax Society</h2>
+          <h2 className="text-md md:text-lg font-semibold text-gray-800 text-start">Skill Society</h2>
           <p className="text-xs md:text-sm text-gray-600 text-start">
-            Syntax Society is a community-driven tech group focused on coding, innovation, and development. It provides a platform for developers to collaborate, learn, and grow through workshops, hackathons, and discussions on emerging technologies. (DEVELOPMENTAL PHASE)
+            Skill Society is a community-driven tech group focused on coding, innovation, and development. It provides a platform for developers to collaborate, learn, and grow through workshops, hackathons, and discussions on emerging technologies.
           </p>
           <div className="flex flex-row gap-4 w-full mt-4">
-            {/* <button className="text-green-400 bg-black py-1 flex flex-row justify-center items-center gap-2 px-4 rounded hover:bg-green-600">
-              <FaExternalLinkAlt /> <span className=" font-medium">Demo</span>
-            </button> */}
+           <a href="https://skillsociety.vercel.app/" target="_blank"
+          rel="noopener noreferrer" className="text-white bg-black py-1 flex flex-row justify-center items-center gap-2 px-4 rounded hover:bg-green-600 transition-all duration-300 ease-in-out">
+              <FaExternalLinkAlt className=" text-sm md:text-lg" /> <span className=" ">Demo</span>
+            </a>
             {/* <button className="bg-black text-white py-1 px-4 rounded">
               <FaGithub />
             </button> */}
